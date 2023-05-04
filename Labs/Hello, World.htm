@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="shortcut icon" href="http://www.cs.toronto.edu/~guerzhoy/180_2016/labs/lab09/favicon.ico"
+        type="image/x-icon">
+    <title>Hello, World</title>
+</head>
+
+<body data-new-gr-c-s-check-loaded="8.904.0" data-gr-ext-installed="">
+    <p>Hi!</p>
+
+    <p>Hello EngSci 1F! <b>A link to U of T's homepage:</b> <a href="http://www.utoronto.ca/">link</a>.</p>
+
+    <p>Here's the link to a Yahoo! search with the keyword "python": <a
+            href="https://ca.search.yahoo.com/search;_ylt=Av3YHOEya_QRKgRTD8kMWgst17V_?p=python&amp;toggle=1&amp;cop=mss&amp;ei=UTF-8&amp;fr=yfp-t-715&amp;fp=1">click
+            here</a></p>
+    <p>And here's "engineering" science: <a
+            href="https://ca.search.yahoo.com/search?p=engineering+science&fr=yfp-t&fp=1&toggle=1&cop=mss&ei=UTF-8">click
+            here</a></p>
+
+    <p>Type a thing to search:
+        <input type="text" name="" id="search">
+        <a href="" id="link">click me!</a>
+    </p>
+
+    <p>Praxis forever</p>
+
+    <p><span class="bold">Vinci</span></p>
+
+</body>
+
+<script>
+    let s = document.getElementById('search')
+    let a = document.getElementById('link')
+
+    
+    s.addEventListener('input', () => { update() })
+    
+    function update() {
+        let search = s.value.split(' ')
+        search = search.join('+')
+        a.href = `https://ca.search.yahoo.com/search?p=${search}`
+    }
+</script>
+
+<style>
+    .bold {
+        font-weight: bold;
+    }
+</style>
+
+</html>
